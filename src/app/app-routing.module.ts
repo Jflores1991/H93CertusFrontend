@@ -9,6 +9,13 @@ import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.compone
 import { SliderbarComponent } from './pages/admin/sliderbar/sliderbar.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CategoriaComponent } from './pages/admin/categoria/categoria.component';
+import { AgregarCategoriaComponent } from './pages/admin/agregar-categoria/agregar-categoria.component';
+import { ExamenComponent } from './pages/admin/examen/examen.component';
+import { AgregarExamenComponent } from './pages/admin/agregar-examen/agregar-examen.component';
+import { PreguntaComponent } from './pages/admin/pregunta/pregunta.component';
+import { AgregarPreguntaComponent } from './pages/admin/agregar-pregunta/agregar-pregunta.component';
+
 
 const routes: Routes = [
   {path : '', component : HomeComponent,pathMatch : 'full'},
@@ -16,7 +23,8 @@ const routes: Routes = [
   {path : 'signup', component : SignupComponent,pathMatch : 'full'},
   {path : 'listarClientes', component : ListarclientesComponent,pathMatch : 'full'},
   {path : 'moduloAdmin', component : ModuloadminitrativoComponent,pathMatch : 'full'},
-  {path : 'profile', component : ProfileComponent,pathMatch : 'full'},
+
+
 
   {path : 'admin' ,component : DashboardComponent, 
   children:[
@@ -25,6 +33,27 @@ const routes: Routes = [
     },
     {
       path : 'sliderbar' ,component : SliderbarComponent, 
+    },
+    {
+      path : 'categoria-view' ,component : CategoriaComponent, 
+    },
+    {
+      path : 'categoria-add' ,component : AgregarCategoriaComponent, 
+    },
+    {
+      path : 'examen-view' ,component : ExamenComponent, 
+    },
+    {
+      path : 'examen-add' ,component : AgregarExamenComponent, 
+    },
+    {
+      path : 'pregunta-view' ,component : PreguntaComponent, 
+    },
+    {
+      path : 'pregunta-add' ,component : AgregarPreguntaComponent, 
+    },
+    { 
+      path : 'profile', component : ProfileComponent,
     }
    ] }
 
